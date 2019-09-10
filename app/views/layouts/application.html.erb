@@ -16,7 +16,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <%= link_to 'Om Nom: Local Eats', root_path, class: 'navbar-brand' %>
+        <%= link_to 'Nomster', root_path, class: 'navbar-brand' %>
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item">
             <%= link_to new_place_path, class: 'nav-link' do %>
@@ -27,6 +27,13 @@
         </ul>
       </div>
     </nav>
+
+    <% if notice.present? %>
+      <p class="alert alert-info"><%= notice %></p>
+    <% end %>
+    <% if alert.present? %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
 
     <%= yield %>
   </body>
