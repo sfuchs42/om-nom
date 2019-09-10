@@ -16,10 +16,13 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <a class="navbar-brand" href="#">Om Nom: Local Eats</a>
+        <%= link_to 'Om Nom: Local Eats', root_path, class: 'navbar-brand' %>
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <%= link_to new_place_path, class: 'nav-link' do %>
+              <i class="fa fa-plus-square"></i>
+              New Place
+            <% end %>
           </li>
         </ul>
       </div>
