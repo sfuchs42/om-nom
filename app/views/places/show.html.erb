@@ -96,6 +96,7 @@
   
   <%= f.submit "Add a Photo", class: 'btn btn-info' %>
 <% end %>
+
 <% @place.photos.each do |photo| %>
   <% if photo.caption.present? %>
     <%= img_tag photo.picture.url %>
