@@ -1,24 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a basic Yelp clone. It allows users to login and post reviews of places they've been to, and can create new places.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+It uses Devise for user logins, AWS for image hosting, Google Maps API to render the location on a map, and is otherwise just a Ruby on Rails app
