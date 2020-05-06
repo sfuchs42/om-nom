@@ -1,9 +1,12 @@
 <div class="nom-box col-10 offset-1">
+  <!--  Show the place's name, address, and a brief description  -->
   <h1><%= @place.name %></h1>
   <i><%= @place.address %></i>
   <br /><br />
   <p><%= @place.description %></p>
   
+  <!--  If the place's coordinates are present it uses Google Maps API -->
+  <!--  to show the location on the map.  -->
   <% if @place.latitude.present? && @place.longitude.present? %>
     
     <script>
@@ -32,6 +35,7 @@
   <br />
 
   <div class="float-right">
+    <!--  Allow the place's user to edit/delete as needed.    -->
     <% if current_user && current_user == @place.user %>
       <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-info' %>
       <%= link_to 'Delete', place_path(@place), method: :delete, data: {confirm: 'Are you sure you want to delete?'}, class: 'btn btn-danger' %>
@@ -124,7 +128,7 @@
 <div class="clear"></div>
 
 
-
+<!-- Displays a place's photos if present -->
 <div class="img-container col-10 offset-1">
   <div class="row">
     <% @place.photos.each do |photo| %>
